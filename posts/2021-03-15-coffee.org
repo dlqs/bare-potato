@@ -1,0 +1,66 @@
+#+title: Coffee
+#+date: <2021-03-15 01:20>
+#+filetags: coffee
+
+# Rolling list of coffee beans
+I don't have very sensitive taste buds. You know how coffee beans usually list their tasting notes on the package? I can barely taste those. So these reviews are really just me.
+
+I'm ranking these from 1-5.
+And I'm always ranking them commensurate with their prices.
+
+**Jimmy Monkey**  
+One-North | 250g | $16 | espresso | 2021
+ - Oily, really oily crema. The beans shine. Pretty nutty, chocolatey. 
+ - Side note: I've been buying beans from Jimmy Monkey since 2013, but they don't roast them there anymore.
+ - 4/5. So far, best value for money.
+#+attr_html: :width 200px
+#+attr_latex: :width 200px
+[[file:static/photo6314135429233880019.jpg]]
+
+
+
+
+
+
+
+**Tiong Hoe Speciality Coffee** Jet Black  
+Tiong Bahru | 250g | $16 | espresso | 2020
+ - Caramel, hazelnut. Not bad at all.
+ - Somehow, all beans from TH have worked pretty well with my machine.
+ - 4/5. I gotta try the other flavors soon.
+
+#+attr_html: :width 200px
+#+attr_latex: :width 200px
+[[file:static/photo6314135429233880021.jpg]]
+
+**Paradise** Mr Brownstone  
+Beauty World | 250g | $18 | espresso | 2020
+ - Meh, not very good.
+ - I bought mine from Flag White at Beauty World but I've seen it sold in other cafes too.
+ - 2/5. Not worth the price.
+
+#+attr_html: :width 200px
+#+attr_latex: :width 200px
+[[file:static/photo6314135429233880022.jpg]]
+
+**PPP** Terra Firma  
+Jalan Besar | 250g | $18 | espresso | 2020
+ - Tastes like berries 'n shit.
+ - 3/5. Meh ~~~
+
+#+attr_html: :width 200px
+#+attr_latex: :width 200px
+[[file:static/photo6314135429233880023.jpg]]
+
+**PPP** Uraga Tome  
+Jalan Besar | 250g | $18 | pour-over | 2020
+ - Legitimately tasted ginger and orange. Not too overpowering, but just enough to identify it. Doesn't taste like any other pour-over I've ever had.
+ - Really amazing aroma. Light ginger scent.
+ - 5/5, but in general I prefer espressos.
+
+#+attr_html: :width 200px
+#+attr_latex: :width 200px
+[[file:static/photo6314135429233880020.jpg]]
+
+
+
