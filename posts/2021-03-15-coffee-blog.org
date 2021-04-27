@@ -1,4 +1,4 @@
-#+title: Rolling list of coffee beans
+#+title: Coffee Beans
 #+date: <2021-03-15 01:20>
 #+filetags: coffee
 
