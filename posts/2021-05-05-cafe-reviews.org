@@ -1,4 +1,4 @@
-#+title: Cafés
+#+title: Café Reviews
 #+date: <2021-05-05 23:52>
 #+filetags: coffee
 

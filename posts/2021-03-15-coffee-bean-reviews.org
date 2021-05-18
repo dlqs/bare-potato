@@ -1,4 +1,4 @@
-#+title: Coffee Beans
+#+title: Coffee Bean Reviews
 #+date: <2021-03-15 01:20>
 #+filetags: coffee
 
@@ -7,8 +7,19 @@ I don't have sensitive taste buds. You know how coffee beans usually list their 
 I'm ranking these from 1-5.
 And I'm always ranking them commensurate with their prices.
 
+** Thus Coffee
+Star Vista | 250g | $15 | espresso | May 2021
+ - The barista went under the counter and poured out the beans from a giant bucket into a bag, then slapped a sticker on it.
+ - So the low quality shouldn't be a surprise - beans stored like that can't possibly stay good for very long.
+ - I gave this place a pity try since the other nearby cafes were all out of beans, just before the Circuit Breaker.
+ - 2/5. Actually tastes ok, but $15 is pricey for beans of this quality.
+#+attr_html: :width 200px
+#+attr_latex: :width 200px
+file:static/photo6134086045088722089.jpg
+
 ** PPP
 Nuts & Bolts
+
 Jalan Besar | 250g | $16 | espresso | 2021
  - Sweet, chocolatey.
  - 4/5. Not bad.
@@ -26,7 +37,8 @@ One-North | 250g | $16 | espresso | 2021
 [[file:static/photo6314135429233880019.jpg]]
 
 ** Tiong Hoe Speciality Coffee
-Jet Black  
+Jet Black
+
 Tiong Bahru | 250g | $16 | espresso | 2020
  - Caramel, hazelnut. Not bad at all.
  - Somehow, all beans from TH have worked pretty well with my machine.
@@ -37,7 +49,8 @@ Tiong Bahru | 250g | $16 | espresso | 2020
 [[file:static/photo6314135429233880021.jpg]]
 
 ** Paradise
-Mr Brownstone  
+Mr Brownstone
+
 Beauty World | 250g | $18 | espresso | 2020
  - Meh, not very good.
  - I bought mine from Flag White at Beauty World but I've seen it sold in other cafes too.
@@ -48,7 +61,8 @@ Beauty World | 250g | $18 | espresso | 2020
 [[file:static/photo6314135429233880022.jpg]]
 
 ** PPP
-Terra Firma  
+Terra Firma
+
 Jalan Besar | 250g | $18 | espresso | 2020
  - Tastes like berries 'n shit.
  - 3/5. Meh ~~~
@@ -59,6 +73,7 @@ Jalan Besar | 250g | $18 | espresso | 2020
 
 ** PPP
 Uraga Tome
+
 Jalan Besar | 250g | $18 | pour-over | 2020
  - Legitimately tasted ginger and orange. Not too overpowering, but just enough to identify it. Doesn't taste like any other pour-over I've ever had.
  - Really amazing aroma. Light ginger scent.
