@@ -1,0 +1,62 @@
+#+TITLE: FRRouting simple eBGP setup
+
+Set up for two routers: r1 in AS 100, r2 in AS 200.
+r1 will broadcast its static routes to r2.
+We're using Lua match script for route-map.
+
+In r1:
+#+begin_src
+hostname r1
+!
+interface veth0
+ ip address 10.0.0.100/31
+!
+router bgp 1
+ bgp router-id 10.0.1.100
+ no bgp ebgp-requires-policy
+ neighbor 10.0.0.101 remote-as external
+ !
+ address-family ipv4 unicast
+  redistribute static
+ end-address-family
+!
+line vty
+!
+#+end_src
+
+In r2:
+#+begin_src
+hostname r2
+!
+interface veth1
+ ip address 10.0.0.101/31
+!
+router bgp 2
+ bgp router-id 10.0.1.101
+ no bgp ebgp-requires-policy
+ neighbor 10.0.0.100 remote-as external
+ !
+ address-family ipv4 unicast
+  neighbor 10.0.0.100 route-map RMAP in
+ end-address-family
+!
+route-map RMAP permit 10
+ match script routemap
+!
+line vty
+!
+#+end_src
+
+In r1, add a static route
+#+begin_src
+ip route 1.1.1.1/32 veth0
+#+end_src
+
+In r2, check that it receives it:
+#+begin_src
+show bgp summary
+#+end_src
+
+For r1, any prefix whose gateway is veth0 should work, besides those already reachable from r2 (since those will be preferred instead)
+
+journalctl -f -u frr should show the zlog prints
