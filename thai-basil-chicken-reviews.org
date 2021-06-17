@@ -1,16 +1,15 @@
 #+title: Thai Basil Chicken Reviews
-#+date: <2021-03-22 00:29>
-#+filetags:
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="styles.css"/>
 
 Thai Basil Chicken (Pad Krapow Gai) ratings from 1-5. I usually choose chicken, but sometimes I eat pork/beef too.
 
 Note: I've never had an "authentic" one in Thailand before.
 
 * Nana Original Thai
-  * Clementi
+  * Clementi, right outside of NUS
   * Spiciness: 3/5
-  * Taste: 3/5. My default choice. Somewhat oily.
-  * I've tried this dish probably more than 20 times, so it's my "normal".
+  * Taste: 3/5. What I order by default. Somewhat oily.
+  * I've had this literally dozens of times, so it's what I grade everything else against.
 
 #+attr_html: :width 200px
 #+attr_latex: :width 200px

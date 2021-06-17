@@ -1,6 +1,5 @@
 #+title: Coffee Bean Reviews
-#+date: <2021-03-15 01:20>
-#+filetags: coffee
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="styles.css"/>
 
 I don't have sensitive taste buds. You know how coffee beans usually list their tasting notes on the package? I can barely taste those. So these reviews are really just me.
 

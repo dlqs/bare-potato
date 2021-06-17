@@ -1,12 +1,10 @@
 #+title: Café Reviews
-#+date: <2021-05-05 23:52>
-#+filetags: coffee
 
 I go to cafes often and want to record down my experience, so that I can leave a trail of credible, organic reviews for these places.
-So that reviews for these places aren't just dominated by professional bloggers' sites which are SEO-ed to death.
+So that reviews for these places aren't just dominated by professional bloggers' sites.
 
-I rate these cafes commensurate with their prices. I don't expect single-origin coffee from the neighborhood
-/kopi-tiam/, but I also believe that Starbucks coffee is way overpriced. Of course, the coffee merely forms part of the cafe experience among other factors,
+I rate these cafes commensurate with their prices. After all, one does not expect single-origin hipster beans from the neighborhood
+/kopi-tiam/; at the same time, Starbucks is almost always overpriced. Of course, coffee merely forms part of the cafe experience among other factors,
 such as the atmosphere and the food, so I try to keep those in mind too.
 
 My scale is out of 5:
