@@ -1,0 +1,24 @@
+#+TITLE: How to run locally built instances of FRRouting with netns
+
+This is useful for locally testing topologies while developing.
+
+1. Start the first local instance of FRR, however your OS does it.
+   1. On Archlinux, this is: ~sudo systemctl start frr~
+2. Setting up another netns and interface
+   1. Create a network namespace (ns) named blue (or any other name): ~ip netns add blue~
+   2. Verify it: ~ip netns list~
+   3. Create two interfaces ~ip link add veth0 type veth peer name veth1~
+   4. Verify the two appear: ~ip link list~
+   5. Move veth1 from the global ns to the blue ns: ~ip link set veth1 netns blue~
+   6. Verify that veth1 is gone from the global ns: ~ip link list~
+   7. Verify that veth1 appears in the blue ns: ~ip netns exec blue ip link list~
+3. Create a copy of /etc/frr, move it to a new directory: /etc/frr/blue
+4. In ~/etc/frr/blue/daemons~, set the blue ns: ~#watchfrr_options="--netns=blue"~
+5. Start the second local instance of FRR: ~/usr/lib/frr/frrinit.sh start blue~
+6. vtysh into them, and verify veth0 and veth1 appear in the first and second instance respectively
+   1. First: ~sudo vtysh~, then ~show interface veth0~
+   2. Second: ~sudo vtysh -N blue~, then ~show interface veth1~
+
+References
+ - https://blog.scottlowe.org/2013/09/04/introducing-linux-network-namespaces/
+ - https://docs.frrouting.org/en/latest/setup.html?highlight=netns#network-namespaces
