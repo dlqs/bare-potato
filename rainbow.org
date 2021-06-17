@@ -1,0 +1,19 @@
+#+TITLE: Rainbow text with Awk
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="styles.css"/>
+
+Want a particular line in your shell script to stand out? Use this sick, POSIX-compliant rainbow script!
+
+#+attr_html: :width 400px
+#+attr_latex: :width 200px
+file:static/rainbow_scrot.png
+
+To try, simply copy and paste this into your shell (it'll download and run the awk script)
+#+begin_src shell
+wget https://gist.githubusercontent.com/dlqs/cfaf6bec0dd8b32e2e4e83ab4e16ea54/raw/ec33825f53b92e4e11ec52bc07acc3a005fdddb7/rainbow.awk && \
+    python3 -c 'print("The quick brown fox jumps over the lazy dog\n"*10, end="")' | awk -f rainbow.awk
+#+end_src
+
+I was inspired to do this when I wanted to add a shameless ask for GitHub stars for one of my projects, but didn't want to drag in an entire Ruby dependency.
+Strictly speaking, its not a rainbow, but the colors look cool anyways.
+
+Source: https://gist.github.com/dlqs/cfaf6bec0dd8b32e2e4e83ab4e16ea54

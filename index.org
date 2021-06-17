@@ -1,5 +1,7 @@
 #+TITLE: dlqs.dev
 
+[[./rainbow.org][Rainbow text with Awk]]
+
 [[./coffee-bean-reviews.org][Coffee bean reviews]]
 
 [[./cafe-reviews.org][Cafe reviews]]
