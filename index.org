@@ -7,3 +7,5 @@
 [[./cafe-reviews.org][Cafe reviews]]
 
 [[./thai-basil-chicken-reviews.org][Thai basil chiken reviews]]
+
+Email: dlqs at gmx dot com
