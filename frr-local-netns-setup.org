@@ -2,7 +2,7 @@
 
 This is useful for locally testing topologies while developing.
 
-1. Start the first local instance of FRR, however your OS does it.
+1. Start the first instance of FRR, however your OS does it.
    1. On Archlinux, this is: ~sudo systemctl start frr~
 2. Setting up another netns and interface
    1. Create a network namespace (ns) named blue (or any other name): ~ip netns add blue~
@@ -14,10 +14,11 @@ This is useful for locally testing topologies while developing.
    7. Verify that veth1 appears in the blue ns: ~ip netns exec blue ip link list~
 3. Create a copy of /etc/frr, move it to a new directory: /etc/frr/blue
 4. In ~/etc/frr/blue/daemons~, set the blue ns: ~#watchfrr_options="--netns=blue"~
-5. Start the second local instance of FRR: ~/usr/lib/frr/frrinit.sh start blue~
+5. Start the second instance of FRR: ~/usr/lib/frr/frrinit.sh start blue~
 6. vtysh into them, and verify veth0 and veth1 appear in the first and second instance respectively
    1. First: ~sudo vtysh~, then ~show interface veth0~
    2. Second: ~sudo vtysh -N blue~, then ~show interface veth1~
+7. To stop the second instance of FRR: ~/usr/lib/frr/frrinit.sh stop blue~
 
 References
  - https://blog.scottlowe.org/2013/09/04/introducing-linux-network-namespaces/

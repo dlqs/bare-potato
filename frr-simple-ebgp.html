@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-06-18 Fri 05:22 -->
+<!-- 2021-07-15 Thu 11:54 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>FRRouting simple eBGP setup</title>
@@ -221,82 +221,87 @@
 <h1 class="title">FRRouting simple eBGP setup</h1>
 <p>
 Set up for two routers: r1 in AS 100, r2 in AS 200.
-r1 will broadcast its static routes to r2.
-We&rsquo;re using Lua match script for route-map.
+r2 will broadcast its static routes to r1.
+This is to demonstrate the Lua match script hook call for route-map.
 </p>
 
 <p>
-In r1:
+In /etc/frr/daemons, ensure BGPD is enabled:
+</p>
+<pre class="example">
+bgpd=yes
+</pre>
+
+<p>
+Copy and paste this into /etc/frr/frr.conf for r1:
 </p>
 <pre class="example">
 hostname r1
-!
+log syslog
 interface veth0
  ip address 10.0.0.100/31
-!
 router bgp 1
  bgp router-id 10.0.1.100
  no bgp ebgp-requires-policy
  neighbor 10.0.0.101 remote-as external
- !
  address-family ipv4 unicast
-  redistribute static
+  neighbor 10.0.0.101 route-map RMAP in
  end-address-family
-!
+route-map RMAP permit 10
+  match script my_script
 line vty
-!
 </pre>
 
 <p>
-In r2:
+For r2:
 </p>
 <pre class="example">
 hostname r2
-!
 interface veth1
  ip address 10.0.0.101/31
-!
 router bgp 2
  bgp router-id 10.0.1.101
  no bgp ebgp-requires-policy
  neighbor 10.0.0.100 remote-as external
- !
  address-family ipv4 unicast
-  neighbor 10.0.0.100 route-map RMAP in
+  redistribute static
  end-address-family
-!
-route-map RMAP permit 10
- match script routemap
-!
 line vty
-!
 </pre>
 
 <p>
-In r1, add a static route
+On both sides, `sudo vtysh` into them, then run `show running-config` to see if our `frr.conf` has been successfully loaded.
+</p>
+
+<p>
+In r2, add a static route
 </p>
 <pre class="example">
-ip route 1.1.1.1/32 veth0
+ip route 1.1.1.1/32 veth1
 </pre>
 
 <p>
-In r2, check that it receives it:
+In r1, check that it is received:
 </p>
 <pre class="example">
 show bgp summary
+show ip route
 </pre>
-
 <p>
-For r1, any prefix whose gateway is veth0 should work, besides those already reachable from r2 (since those will be preferred instead)
+The route will not show up if it wasn&rsquo;t installed, for various reasons.
+Look at logs with `journalctl -f -u frr`
 </p>
 
 <p>
-journalctl -f -u frr should show the zlog prints
+If that doesn&rsquo;t show up, check your logging settings.
 </p>
+<pre class="example">
+show logging
+</pre>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Donald Lee Qian Siang</p>
-<p class="date">Created: 2021-06-18 Fri 05:22</p>
+<p class="date">Created: 2021-07-15 Thu 11:54</p>
 </div>
 </body>
 </html>

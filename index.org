@@ -8,4 +8,10 @@
 
 [[./thai-basil-chicken-reviews.org][Thai basil chiken reviews]]
 
+FRRouting
+
+[[./frr-local-net-ns-setup][How to run locally built instances of FRRouting with netns]]
+
+[[./frr-simple-ebgp][Simple eBGP setup]]
+
 Email: dlqs at gmx dot com

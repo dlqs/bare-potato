@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-06-18 Fri 03:57 -->
+<!-- 2021-07-15 Thu 12:41 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>How to run locally built instances of FRRouting with netns</title>
@@ -224,7 +224,7 @@ This is useful for locally testing topologies while developing.
 </p>
 
 <ol class="org-ol">
-<li>Start the first local instance of FRR, however your OS does it.
+<li>Start the first instance of FRR, however your OS does it.
 <ol class="org-ol">
 <li>On Archlinux, this is: <code>sudo systemctl start frr</code></li>
 </ol></li>
@@ -240,12 +240,13 @@ This is useful for locally testing topologies while developing.
 </ol></li>
 <li>Create a copy of /etc/frr, move it to a new directory: /etc/frr/blue</li>
 <li>In <code>/etc/frr/blue/daemons</code>, set the blue ns: <code>#watchfrr_options="--netns=blue"</code></li>
-<li>Start the second local instance of FRR: <code>/usr/lib/frr/frrinit.sh start blue</code></li>
+<li>Start the second instance of FRR: <code>/usr/lib/frr/frrinit.sh start blue</code></li>
 <li>vtysh into them, and verify veth0 and veth1 appear in the first and second instance respectively
 <ol class="org-ol">
 <li>First: <code>sudo vtysh</code>, then <code>show interface veth0</code></li>
 <li>Second: <code>sudo vtysh -N blue</code>, then <code>show interface veth1</code></li>
 </ol></li>
+<li>To stop the second instance of FRR: <code>/usr/lib/frr/frrinit.sh stop blue</code></li>
 </ol>
 
 <p>
@@ -258,7 +259,7 @@ References
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Donald Lee Qian Siang</p>
-<p class="date">Created: 2021-06-18 Fri 03:57</p>
+<p class="date">Created: 2021-07-15 Thu 12:41</p>
 </div>
 </body>
 </html>
