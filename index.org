@@ -10,7 +10,7 @@
 
 FRRouting
 
-[[./frr-local-net-ns-setup][How to run locally built instances of FRRouting with netns]]
+[[./frr-local-netns-setup][How to run locally built instances of FRRouting with netns]]
 
 [[./frr-simple-ebgp][Simple eBGP setup]]
 
